@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bidi:Schema xmlns:bidi="http://schemas.microsoft.com/windows/2010/09/printing/usbbidi">
+  <!--Version 3.17-->
+  <Property name="Printer">
+    <Property name="Configuration">
+      <Property name="DuplexUnit">
+        <Value name="Installed" accessType="Get" type="BIDI_BOOL" queryKey="\Printer.Configuration.DuplexUnit:Installed;MultiStrCompBool;GetSimplePrinterAttributes;sides-supported;two-sided-long-edge;two-sided-short-edge" drvPrinterEvent="true" />
+      </Property>
+      <Property name="DeviceDefaultDuplexStandard">
+        <Value name="DefaultDuplexStandard" accessType="Get" type="BIDI_BOOL" queryKey="\Printer.Configuration.DeviceDefaultDuplexStandard:DefaultDuplexStandard;StrCompBool;GetSimplePrinterAttributes;hp-default-duplex-standard;01" drvPrinterEvent="true" />
+      </Property>
+      <Property name="Mopier">
+        <Value name="Installed" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.Mopier:Installed;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-storage-available;01=true;00=false" drvPrinterEvent="true" />
+      </Property>
+      <Property name="JobStorage">
+        <Value name="Installed" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:Installed;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-storage-available;01=true;00=false" drvPrinterEvent="true" />
+      </Property>
+      <Property name="JobStorage">
+        <Value name="Supported" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:Supported;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-storage-supported" drvPrinterEvent="true" />
+        <Value name="Type" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:Type;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-storage-supported" drvPrinterEvent="true" />
+        <Value name="Mode" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:Mode;GetAttributeString;GetSimplePrinterAttributes;save-disposition-supported" drvPrinterEvent="true" />
+        <Value name="Encryption" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:Encryption;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-encryption-supported" drvPrinterEvent="true" />
+        <Value name="IsAlphaNumeric" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:IsAlphaNumeric;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-password-type;numeric=false;alphanumeric=true" drvPrinterEvent="true" />
+        <Value name="PasswordMaxLength" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:PasswordMaxLength;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-password-max-length" drvPrinterEvent="true" />
+        <Value name="PasswordMinLength" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.JobStorage:PasswordMinLength;GetAttributeString;GetSimplePrinterAttributes;hp-save-job-password-min-length" drvPrinterEvent="true" />
+      </Property>
+      <Property name="PrintContract">
+        <Value name="VersionMajor" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.PrintContract:VersionMajor;GetAttributeString;GetSimplePrinterAttributes;hp-pc-version-major" drvPrinterEvent="true" />
+        <Value name="VersionMinor" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Configuration.PrintContract:VersionMinor;GetAttributeString;GetSimplePrinterAttributes;hp-pc-version-minor" drvPrinterEvent="true" />
+      </Property>
+    </Property>
+    <!-- Query for Status-->
+    <Property name="Status">
+      <Property name="Summary">
+        <Value name="StateReason" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Status.Summary:StateReason;GetAttributeString;GetSimplePrinterAttributes;printer-state-reasons" drvPrinterEvent="true" />
+      </Property>
+    </Property>
+    <!-- Query for InputBins-->
+    <Property name="Layout">
+      <Property name="InputBins">
+        <Property name="Tray003">
+          <Value name="Installed" accessType="Get" type="BIDI_BOOL" queryKey="\Printer.Layout.InputBins.Tray003:Installed;GetOctetStringValues2;GetSimplePrinterAttributes;printer-input-tray;Tray 3" drvPrinterEvent="true" />
+          <Value name="MediaType" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Layout.InputBins.Tray003:MediaType;GetAttributeString;GetTrayAttributes;media-col-ready;tray-3;media-type" drvPrinterEvent="true" />
+          <Value name="MediaSize" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Layout.InputBins.Tray003:MediaSize;GetAttributeString;GetTrayAttributes;media-col-ready;tray-3;media-size.media-size-name" drvPrinterEvent="true" />
+          <Value name="FeedDirection" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Layout.InputBins.Tray003:FeedDirection;GetAttributeString;GetTrayAttributes;media-col-ready;tray-3;media-source-properties.media-source-feed-direction" drvPrinterEvent="true" />
+          <Value name="Capacity" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Layout.InputBins.Tray003:Capacity;GetOctetStringValues;GetSimplePrinterAttributes;printer-input-tray;Tray 3;maxcapacity" drvPrinterEvent="true" />
+          <Value name="Level" accessType="Get" type="BIDI_STRING" queryKey="\Printer.Layout.InputBins.Tray003:Level;GetOctetStringValues;GetSimplePrinterAttributes;printer-input-tray;Tray 3;level" drvPrinterEvent="true" />
+        </Property>
+      </Property>
+    </Property>
+  </Property>
+</bidi:Schema>

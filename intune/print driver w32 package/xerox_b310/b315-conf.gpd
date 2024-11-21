@@ -1,0 +1,55 @@
+
+*%******************************************************************************************
+*% AutoConfig features for Xerox B305/B310/B315
+*% Copyright(c) 2021 Xerox Corporation
+*% All rights reserved.
+*%******************************************************************************************
+ 
+*GPDSpecVersion: "1.0"
+
+*BidiQueryFile: "b315-conf.GDL"
+
+*Feature: InstallableProductivityPackActual
+{
+	*rcNameID: =IDS_PRODUCTIVITY_PACK
+	*FeatureType: PRINTER_PROPERTY
+	*DefaultOption: NotInstalled
+		
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_INSTOPT_NOT_INSTALLED
+		*DisabledFeatures: LIST(JobPasscode)
+	
+	}
+		
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTOPT_INSTALLED
+			
+	}
+}
+*InvalidCombination: LIST(InstallableProductivityPackActual.NotInstalled, WindowsPinPrinting.ON)
+
+
+*Feature: InstallableInputPaperTraysActual
+{
+	*rcNameID: =IDS_INSTOPT_PAPER_TRAYS
+	*FeatureType: PRINTER_PROPERTY
+	*DefaultOption: 3Trays
+		
+	*Option: 3Trays
+	{
+		*rcNameID: =IDS_INSTOPT_THREE_TRAYS
+			
+	}
+		
+	*Option: 4Trays
+	{
+		*rcNameID: =IDS_INSTOPT_FOUR_TRAYS
+			
+	}
+}
+*InvalidCombination: LIST(InstallableProductivityPackActual.NotInstalled, WindowsPinPrinting.ON)
+
+
+

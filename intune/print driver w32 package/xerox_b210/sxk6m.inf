@@ -1,0 +1,349 @@
+; Copyright 2019 Xerox Corporation. All rights reserved.
+
+[Version]
+Signature="$Windows NT$"
+Class=Printer
+Provider=%PROVIDER%
+CatalogFile = sxk6m.cat
+DriverVer=03/07/2022, 3.13.59.00
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+DriverIsolation=2
+
+;
+; The Manufacturer section lists all of the manufacturers that we will
+; display in the Dialog box
+
+[Manufacturer]
+%PROVIDER% = MODEL,NTx86,NTx86.5.1,NTx86.6.0,NTamd64,NTamd64.6.0
+
+; Model section for Windows 2000 and XP
+[MODEL]
+"Xerox B210 Printer" = DRVINSTALL, LPTENUM\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, USBPRINT\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, WSDPRINT\XeroxB210_PrinterD3AE
+
+[MODEL.NTx86]
+"Xerox B210 Printer" = DRVINSTALL, LPTENUM\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, USBPRINT\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, WSDPRINT\XeroxB210_PrinterD3AE
+
+[MODEL.NTx86.5.1]
+"Xerox B210 Printer" = DRVINSTALL, LPTENUM\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, USBPRINT\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, WSDPRINT\XeroxB210_PrinterD3AE
+
+[MODEL.NTx86.6.0]
+"Xerox B210 Printer" = DRVINSTALL, LPTENUM\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, USBPRINT\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, WSDPRINT\XeroxB210_PrinterD3AE
+
+[MODEL.NTamd64]
+"Xerox B210 Printer" = DRVINSTALL, LPTENUM\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, USBPRINT\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, WSDPRINT\XeroxB210_PrinterD3AE
+
+[MODEL.NTamd64.6.0]
+"Xerox B210 Printer" = DRVINSTALL, LPTENUM\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, USBPRINT\XeroxB210_PrinterD3AE
+"Xerox B210 Printer" = DRVINSTALL, WSDPRINT\XeroxB210_PrinterD3AE
+
+[OEM URLS]
+%PROVIDER% = "http://office.xerox.com"
+
+;
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. If the section name will be assumed to be the driver
+; file, unless there is an explicit DriverFile section listed.
+;
+
+; Installation section for Win2000 and XP
+[DRVINSTALL]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES
+DataSection=DRVCONFIG
+DataFile=sxk6mpp.dll
+CopyINF=reststub.inf
+[DRVINSTALL.NTx86.5.1]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES
+DataSection=DRVCONFIG
+DataFile=sxk6mpp.dll
+CopyINF=reststub.inf
+
+[DRVINSTALL.NTx86.6.0]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES
+DataSection=DRVCONFIG
+DataFile=sxk6mpp.dll
+AddReg = DRVINSTALL.NTx86.6.0.AddReg
+CopyINF=reststub.inf
+
+[DRVINSTALL.NTx86.6.0.AddReg]
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppName,0x00000000,sxk6msm.exe
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppPath,0x00000000,"%51%\drivers\w32x86\3"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",Policy,0x00010001,3
+[DRVINSTALL.NTamd64.6.0]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES
+DataSection=DRVCONFIG
+DataFile=sxk6mpp.dll
+AddReg = DRVINSTALL.NTamd64.6.0.AddReg
+CopyINF=reststub.inf
+
+[DRVINSTALL.NTamd64.6.0.AddReg]
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppName,0x00000000,sxk6msm.exe
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppPath,0x00000000,"%51%\drivers\x64\3"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",Policy,0x00010001,3
+;
+; Data Sections
+;
+; These sections contain data that is shared between devices.
+;
+[DRVCONFIG]
+DriverFile=sxk6m.dll
+ConfigFile=sxk6mdu.dll
+HelpFile=sxk6men.chm
+LanguageMonitor="sxk6m Langmon,sxk6mlm.dll"
+PrintProcessor="sxk6mPC,sxk6mpc.dll"
+
+[DRVINSTALL.CoInstallers]
+AddReg=COINST.AddReg
+CopyFiles=COINSTFILES
+[DRVINSTALL.NTx86.5.1.CoInstallers]
+AddReg=COINST.AddReg
+CopyFiles=COINSTFILES
+
+[DRVINSTALL.NTx86.6.0.CoInstallers]
+AddReg=COINST.AddReg
+CopyFiles=COINSTFILES
+
+[DRVINSTALL.NTamd64.6.0.CoInstallers]
+AddReg=COINST.AddReg
+CopyFiles=COINSTFILES
+
+[COINST.AddReg]
+HKR,,CoInstallers32,0x10000,"sxk6mci.dll,CoDeviceInstall"
+
+;------------------------------------------------------
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections, above. Only create a section if it contains
+; two or more files (if we only copy a single file, identify it in the
+; installer section, using the @filename notation)
+;
+[LANGMONFILES]
+sxk6mlm.dll,itdrvlm.dll
+
+[PRPROCFILES]
+sxk6mpc.dll,  itdrvpc.dll
+
+[COINSTFILES]
+sxk6mci.dll,  coinst.dll
+sxk6mci.exe,  coinst.exe
+
+[DRVFILES]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Driver Core files and DLLs and Other files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6m.dll,    itdrv.dll
+sxk6mdu.dll,  itdrvdu.dll
+sxk6muc.dll,  itdrvuc.dll
+sxk6mur.dll,  itdrvur.dll
+sxk6mpp.dll,  itdrvpp.dll
+sxk6mf.xml,   itdrvf.xml
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FrameBuffer files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mlf.dll,  itdrvlf.dll
+sxk6mum.dll,  itdrvum.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; DCU (Driver Configuration Utility)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mcu.dll,	itdrvcu.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SmartCMS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6msc.cts
+sxk6msc.dll,  itdrvsc.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Manual Duplex files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mm1.bmp,  itdrvm1.bmp
+sxk6mm2.bmp,  itdrvm2.bmp
+sxk6mm3.bmp,  itdrvm3.bmp
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Lite Status Monitor files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6msm.exe,  itdrvsm.exe
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model dependent script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mc.xml
+sxk6mp.xml
+sxk6mpp.ver
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Bmp files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mimg.cab
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SNMP files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mn.dll,   itdrvn.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Eco Confirm files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6man.dll,   itdrvan.dll
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Localized XML files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mstr.cab
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Help files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mchm.cab
+sxk6men.chm,  itdrven.chm 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+; Web Agreement files 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+sxk6mdr.exe, itdrvDR.exe 
+sxk6mua.dll, itdrvUA.dll 
+
+;
+; Color profiles go to the colors directory.  All other files to the the
+; system directory
+;
+
+[DestinationDirs]
+DefaultDestDir=66000
+LANGMONFILES=66002
+COINSTFILES = 66002
+PRPROCFILES=66001
+
+[SourceDisksNames]
+3 = %DISK_NAME%,,,"i386"
+2 = %DISK_NAME%,,,"Common"
+1 = %DISK_NAME%,,,
+
+[SourceDisksNames.amd64]
+3 = %DISK_NAME%,,,"amd64"
+2 = %DISK_NAME%,,,"Common"
+1 = %DISK_NAME%,,,
+
+[SourceDisksFiles]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Driver Core files and DLLs and Other files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrv.dll       = 3
+itdrvdu.dll     = 3
+itdrvuc.dll     = 3
+itdrvur.dll     = 3
+itdrvpp.dll     = 2
+itdrvf.xml      = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FrameBuffer files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvlf.dll     = 3
+itdrvum.dll  = 3
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; DCU (Driver Configuration Utility)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvcu.dll			= 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SmartCMS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6msc.cts    = 2
+itdrvsc.dll     = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Manual Duplex files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvm1.bmp     = 2
+itdrvm2.bmp     = 2
+itdrvm3.bmp     = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Lite Status Monitor files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvsm.exe     = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model dependent script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mc.xml	= 1
+sxk6mp.xml	= 1
+sxk6mpp.ver	= 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Bmp files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mimg.cab  = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SNMP files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvn.dll      = 3
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Confirm files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvan.dll     = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Localized XML files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mstr.cab = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Help files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sxk6mchm.cab = 2
+itdrven.chm 	= 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; COINSTFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+coinst.dll      = 3 
+coinst.exe      = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; LANGMONFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvlm.dll     = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; PRPROCFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvpc.dll     = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+; Web Agreement files 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+itdrvDR.exe     = 3 
+itdrvUA.dll     = 3 
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+[PrinterPackageInstallation.amd64]
+PackageAware=TRUE
+
+[Strings]
+PROVIDER = "Xerox"
+DISK_NAME = "Xerox Printer Driver Installation CD"
+GUIDSM = "{75D349E3-E166-4d50-8D8B-60E6E75A760C}"
+GUIDPI = "{77A480DB-9580-4833-B571-37D84620CAB5}"

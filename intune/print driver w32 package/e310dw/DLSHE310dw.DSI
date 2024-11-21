@@ -1,0 +1,14 @@
+[DSIInfo]
+DSM_Signature=BRDSM110
+SeriesSettingFile=DLPRM13A.DSI
+LanguageInfo=en-US
+[FileList]
+Readback=DLOHE310dw.INI
+Init=DLDHE310dw.DAT
+ExInit=DLEHE310dw.DAT
+[DriverInfo]
+ModelName=Printer E310dw
+ModelNameForReadback=Dell Printer E310dw
+DriverType=1111
+[Capability]
+PrintProfilePreset=GENERAL_MONOICON,PAPERSAVE_UNIT,TONERSAVE,TWOSIDED_UNIT,BOOKLET_UNIT

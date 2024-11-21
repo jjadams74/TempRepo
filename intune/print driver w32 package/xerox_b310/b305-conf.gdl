@@ -1,0 +1,60 @@
+*%******************************************************************************************
+*% GDL AutoConfig file for Xerox B305/B310/B315
+*% Copyright(c) 2021 Xerox Corporation
+*% All rights reserved.
+*%******************************************************************************************
+
+*Feature: InstallableProductivityPackActual
+{
+	*FeatureType: PRINTER_PROPERTY
+	*BidiQuery: InstallableProductivityPackActual
+	{
+		*QueryString: "\Printer.Configuration.InstallableOptionsActualCol:InstallableProductivityPackActual"
+	}
+
+	*BidiResponse: InstallableProductivityPackActual
+	{
+		*ResponseType: BIDI_STRING
+		*ResponseData: ENUM_OPTION(InstallableProductivityPackActual)
+	}
+
+		
+	*Option: NotInstalled
+	{
+		*BidiValue: STRING("NotInstalled")
+	}
+		
+	*Option: Installed
+	{
+		*BidiValue: STRING("Installed")
+	}
+}
+
+*Feature: InstallableInputPaperTraysActual
+{
+	*FeatureType: PRINTER_PROPERTY
+	*BidiQuery: InstallableInputPaperTraysActual
+	{
+		*QueryString: "\Printer.Configuration.InstallableOptionsActualCol:InstallableInputPaperTraysActual"
+	}
+
+	*BidiResponse: InstallableInputPaperTraysActual
+	{
+		*ResponseType: BIDI_STRING
+		*ResponseData: ENUM_OPTION(InstallableInputPaperTraysActual)
+	}
+
+		
+	*Option: 3Trays
+	{
+		*BidiValue: STRING("3Trays")
+	}
+		
+	*Option: 4Trays
+	{
+		*BidiValue: STRING("4Trays")
+	}
+}
+
+
+

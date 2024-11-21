@@ -1,0 +1,34 @@
+*%******************************************************************************************
+*% GDL AutoConfig file for Xerox B225/B230/B235
+*% Copyright(c) 2021 Xerox Corporation
+*% All rights reserved.
+*%******************************************************************************************
+
+*Feature: InstallableProductivityPackActual
+{
+	*FeatureType: PRINTER_PROPERTY
+	*BidiQuery: InstallableProductivityPackActual
+	{
+		*QueryString: "\Printer.Configuration.InstallableOptionsActualCol:InstallableProductivityPackActual"
+	}
+
+	*BidiResponse: InstallableProductivityPackActual
+	{
+		*ResponseType: BIDI_STRING
+		*ResponseData: ENUM_OPTION(InstallableProductivityPackActual)
+	}
+
+		
+	*Option: NotInstalled
+	{
+		*BidiValue: STRING("NotInstalled")
+	}
+		
+	*Option: Installed
+	{
+		*BidiValue: STRING("Installed")
+	}
+}
+
+
+

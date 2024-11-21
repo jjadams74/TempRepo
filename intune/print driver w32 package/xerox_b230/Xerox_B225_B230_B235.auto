@@ -1,0 +1,16 @@
+comment;			Xerox B2XX Mohave AUTO-CONFIGURATION MAPPINGS
+
+comment; Tray configurations is a SequenceContaining type of feature.  Basically, this means we walk the MIB until we find a matching
+comment; string, and when we do, we set the value accordingly.  This means that if we find a value of 4 or 5, we know the optional trays are installed
+ACF_SEQUENCE_CONTAINS_OID;installable-input-paper-trays-actual;1.3.6.1.2.1.43.8.2.1.2;
+	1.3.6.1.2.1.43.8.2.1.2.1.3;2-trays
+	1.3.6.1.2.1.43.8.2.1.2.1.2;2-trays
+	default;2-trays
+	end;
+
+comment; Productivity Pack
+ACF_VALUE_EQUALS_MAP;installable-productivity-pack-actual;1.3.6.1.4.1.253.8.53.13.2.1.6.1.180.148;
+    2;not-installed;
+    1;installed;
+    default;not-installed
+	end;

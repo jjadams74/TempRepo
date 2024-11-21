@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedProductData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ReleaseDescriptorNoSpaces>Xerox_B305_B310_B315</ReleaseDescriptorNoSpaces>
+  <ReleaseDescriptorWithSpaces>Xerox B305/B310/B315</ReleaseDescriptorWithSpaces>
+  <RecommendedPdl>PCL6</RecommendedPdl>
+  <V4DriverPDL>PS</V4DriverPDL>
+  <V4DriverPDL>PCL6</V4DriverPDL>
+  <CWISColorLevelsLink>http://{0}/#/Status</CWISColorLevelsLink>
+  <CWISPaperLevelsLink>http://{0}/#/Status</CWISPaperLevelsLink>
+  <WebLinkModelId>B305_B310_B315</WebLinkModelId>
+  <DefaultRegistrationModel>B310</DefaultRegistrationModel>
+  <capabilities>
+    <ControllerFamily>LOWEND</ControllerFamily>
+    <ControllerFamilyVersion>1.0</ControllerFamilyVersion>
+    <!-- Microsoft's Auto-Config requires firmware update to D2.1 (e.g. SMP-1) or later. -->
+    <MicrosoftWsdMonAutoConfig>SupportedPostLaunch</MicrosoftWsdMonAutoConfig>
+    <MicrosoftTcpMonAutoConfig>SupportedPostLaunch</MicrosoftTcpMonAutoConfig>
+    <XBDSLevel />
+    <XCPTLevel>1.0</XCPTLevel>
+    <CBRLevel />
+    <ColorCapability>Monochrome</ColorCapability>
+    <MediaTypeTranslation>Office</MediaTypeTranslation>
+    <RequiresXCPTAndPJLBoth>true</RequiresXCPTAndPJLBoth>
+    <LegacyBidiTonerType>MonoSingleBlack</LegacyBidiTonerType>
+    <LegacyBidiJobStatusSupport>Available</LegacyBidiJobStatusSupport>
+    <NonXBDS_EOJSupport>Available</NonXBDS_EOJSupport>
+    <!-- EarthSmartSupport is true, if the support available, false otherwise -->
+    <EarthSmartSupport>true</EarthSmartSupport>
+  </capabilities>
+  <models>
+    <PrinterModel>
+      <ModelName>Xerox B310 Printer</ModelName>
+      <ShortModelName>Xerox B310</ShortModelName>
+      <Mimic>Xerox_B310_48.png</Mimic>
+      <Mimic256>Xerox_B310_256.png</Mimic256>
+      <SysObjectIds>
+        <string>1.3.6.1.4.1.253.8.62.1.37.2.2.1.1</string>
+      </SysObjectIds>
+      <USBProductId>982a</USBProductId>
+      <RatedSpeed>40</RatedSpeed>
+      <HardwareId>XeroxB310_Printer742B</HardwareId>
+      <ConditionalModelDesignation>B310</ConditionalModelDesignation>
+      <WebLinkModelId>B310</WebLinkModelId>
+      <DeviceStageIconName>Xerox_B310_256</DeviceStageIconName>
+    </PrinterModel>
+    <PrinterModel>
+      <ModelName>Xerox B305 MFP</ModelName>
+      <Mimic>Xerox_B315_48.png</Mimic>
+      <Mimic256>Xerox_B315_256.png</Mimic256>
+      <SysObjectIds>
+        <string>1.3.6.1.4.1.253.8.62.1.37.2.1.1.1</string>
+      </SysObjectIds>
+      <USBProductId>9829</USBProductId>
+      <RatedSpeed>42</RatedSpeed>
+      <HardwareId>XeroxB305_MFP16BC</HardwareId>
+      <ConditionalModelDesignation>B305</ConditionalModelDesignation>
+      <WebLinkModelId>B305_B315</WebLinkModelId>
+      <DeviceStageIconName>Xerox_B315_256</DeviceStageIconName>
+    </PrinterModel>
+    <PrinterModel>
+      <ModelName>Xerox B315 MFP</ModelName>
+      <Mimic>Xerox_B315_48.png</Mimic>
+      <Mimic256>Xerox_B315_256.png</Mimic256>
+      <SysObjectIds>
+        <string>1.3.6.1.4.1.253.8.62.1.37.2.3.1.1</string>
+      </SysObjectIds>
+      <USBProductId>982b</USBProductId>
+      <RatedSpeed>42</RatedSpeed>
+      <HardwareId>XeroxB315_MFP071C</HardwareId>
+      <ConditionalModelDesignation>B315</ConditionalModelDesignation>
+      <WebLinkModelId>B305_B315</WebLinkModelId>
+      <DeviceStageIconName>Xerox_B315_256</DeviceStageIconName>
+    </PrinterModel>
+  </models>
+</SharedProductData>

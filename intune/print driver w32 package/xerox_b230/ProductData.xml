@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedProductData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ReleaseDescriptorNoSpaces>Xerox_B225_B230_B235</ReleaseDescriptorNoSpaces>
+  <ReleaseDescriptorWithSpaces>Xerox B225/B230/B235</ReleaseDescriptorWithSpaces>
+  <RecommendedPdl>PCL6</RecommendedPdl>
+  <V4DriverPDL>PS</V4DriverPDL>
+  <V4DriverPDL>PCL6</V4DriverPDL>
+  <CWISColorLevelsLink>http://{0}/#/Status</CWISColorLevelsLink>
+  <CWISPaperLevelsLink>http://{0}/#/Status</CWISPaperLevelsLink>
+  <WebLinkModelId>B225_B230_B235</WebLinkModelId>
+  <DefaultRegistrationModel>B225</DefaultRegistrationModel>
+  <capabilities>
+    <ControllerFamily>LOWEND</ControllerFamily>
+    <ControllerFamilyVersion>1.0</ControllerFamilyVersion>
+    <!-- Microsoft's Auto-Config requires firmware update to D2.1 (e.g. SMP-1) or later. -->
+    <MicrosoftWsdMonAutoConfig>SupportedPostLaunch</MicrosoftWsdMonAutoConfig>
+    <MicrosoftTcpMonAutoConfig>SupportedPostLaunch</MicrosoftTcpMonAutoConfig>
+    <XBDSLevel />
+    <XCPTLevel>1.0</XCPTLevel>
+    <CBRLevel />
+    <ColorCapability>Monochrome</ColorCapability>
+    <MediaTypeTranslation>Office</MediaTypeTranslation>
+    <RequiresXCPTAndPJLBoth>true</RequiresXCPTAndPJLBoth>
+    <LegacyBidiTonerType>MonoSingleBlack</LegacyBidiTonerType>
+    <LegacyBidiJobStatusSupport>Available</LegacyBidiJobStatusSupport>
+    <NonXBDS_EOJSupport>Available</NonXBDS_EOJSupport>
+    <!-- EarthSmartSupport is true, if the support available, false otherwise -->
+    <EarthSmartSupport>true</EarthSmartSupport>
+  </capabilities>
+  <models>
+    <PrinterModel>
+      <ModelName>Xerox B230 Printer</ModelName>
+      <ShortModelName>Xerox B230</ShortModelName>
+      <Mimic>Xerox_B230_48.png</Mimic>
+      <Mimic256>Xerox_B230_256.png</Mimic256>
+      <SysObjectIds>
+        <string>1.3.6.1.4.1.253.8.62.1.38.2.2.1.1</string>
+      </SysObjectIds>
+      <USBProductId>9D3A</USBProductId>
+      <RatedSpeed>36</RatedSpeed>
+      <HardwareId>XeroxB230_Printer190F</HardwareId>
+      <ConditionalModelDesignation>B230</ConditionalModelDesignation>
+      <WebLinkModelId>B230</WebLinkModelId>
+      <DeviceStageIconName>Xerox_B230_256</DeviceStageIconName>
+      <DriverBasedCollation>1</DriverBasedCollation>
+    </PrinterModel>
+    <PrinterModel>
+      <ModelName>Xerox B225 MFP</ModelName>
+      <ShortModelName>Xerox B225</ShortModelName>
+      <Mimic>Xerox_B225_48.png</Mimic>
+      <Mimic256>Xerox_B225_256.png</Mimic256>
+      <SysObjectIds>
+        <string>1.3.6.1.4.1.253.8.62.1.38.2.1.1.1</string>
+      </SysObjectIds>
+      <USBProductId>9D39</USBProductId>
+      <RatedSpeed>36</RatedSpeed>
+      <HardwareId>XeroxB225_MFP4C0D</HardwareId>
+      <ConditionalModelDesignation>B225</ConditionalModelDesignation>
+      <WebLinkModelId>B225</WebLinkModelId>
+      <DeviceStageIconName>Xerox_B225_256</DeviceStageIconName>
+      <DriverBasedCollation>1</DriverBasedCollation>
+    </PrinterModel>
+    <PrinterModel>
+      <ModelName>Xerox B235 MFP</ModelName>
+      <ShortModelName>Xerox B235</ShortModelName>
+      <Mimic>Xerox_B235_48.png</Mimic>
+      <Mimic256>Xerox_B235_256.png</Mimic256>
+      <SysObjectIds>
+        <string>1.3.6.1.4.1.253.8.62.1.38.2.3.1.1</string>
+      </SysObjectIds>
+      <USBProductId>9D3B</USBProductId>
+      <RatedSpeed>36</RatedSpeed>
+      <HardwareId>XeroxB235_MFP5C8D</HardwareId>
+      <ConditionalModelDesignation>B235</ConditionalModelDesignation>
+      <WebLinkModelId>B235</WebLinkModelId>
+      <DeviceStageIconName>Xerox_B235_256</DeviceStageIconName>
+      <DriverBasedCollation>1</DriverBasedCollation>
+    </PrinterModel>
+  </models>
+</SharedProductData>

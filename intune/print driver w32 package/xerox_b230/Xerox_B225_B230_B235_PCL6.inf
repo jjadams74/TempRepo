@@ -1,0 +1,180 @@
+
+
+;***************************************************************************************
+; INF file for Xerox B225/B230/B235 PCL6 print driver
+; Copyright (c) 2021 Xerox Corporation
+; All rights reserved.
+;***************************************************************************************
+
+
+[Version]
+Signature="$Windows NT$"
+Provider=%XR%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile=Xerox_B225_B230_B235.cat
+ClassVer=4.0
+DriverVer=10/08/2021,7.249.0.0
+
+[Manufacturer]
+"Xerox"=Model,NTamd64
+[Model.NTamd64]
+"Xerox B230 Printer V4 PCL6" = INSTALL_SECTION_B230,usbprint\XeroxB230_Printer190F
+"Xerox B230 Printer V4 PCL6" = INSTALL_SECTION_B230,wsdprint\XeroxB230_Printer190F
+"Xerox B230 Printer V4 PCL6" = INSTALL_SECTION_B230,XeroxB230_Printer190F
+
+"Xerox B225 MFP V4 PCL6" = INSTALL_SECTION_B225,usbprint\XeroxB225_MFP4C0D
+"Xerox B225 MFP V4 PCL6" = INSTALL_SECTION_B225,wsdprint\XeroxB225_MFP4C0D
+"Xerox B225 MFP V4 PCL6" = INSTALL_SECTION_B225,XeroxB225_MFP4C0D
+
+"Xerox B235 MFP V4 PCL6" = INSTALL_SECTION_B235,usbprint\XeroxB235_MFP5C8D
+"Xerox B235 MFP V4 PCL6" = INSTALL_SECTION_B235,wsdprint\XeroxB235_MFP5C8D
+"Xerox B235 MFP V4 PCL6" = INSTALL_SECTION_B235,XeroxB235_MFP5C8D
+
+"Xerox B225/B230/B235 V4 PCL6" = INSTALL_SECTION_B230,usbprint\XeroxNoSel_caab8873ad245e5b
+"Xerox B225/B230/B235 V4 PCL6" = INSTALL_SECTION_B230,wsdprint\XeroxNoSel_caab8873ad245e5b
+"Xerox B225/B230/B235 V4 PCL6" = INSTALL_SECTION_B230,XeroxNoSel_caab8873ad245e5b
+"Xerox B225/B230/B235 V4 PCL6" = INSTALL_SECTION_B230,{CA498E2C-743E-4CA8-8E06-E6A7B3600E38}
+
+[ControlFlags]
+ExcludeFromSelect = usbprint\XeroxNoSel_caab8873ad245e5b
+ExcludeFromSelect = wsdprint\XeroxNoSel_caab8873ad245e5b
+ExcludeFromSelect = XeroxNoSel_caab8873ad245e5b
+ExcludeFromSelect = {CA498E2C-743E-4CA8-8E06-E6A7B3600E38}
+
+[DestinationDirs]
+DefaultDestDir=66000
+
+[INSTALL_SECTION_B230]
+CopyFiles=GENERAL_FILES_B230,LOCALE_FILES_B230,XR_FILTER_FILES,MODEL_FILES_B230
+
+[INSTALL_SECTION_B225]
+CopyFiles=GENERAL_FILES_B230,LOCALE_FILES_B230,XR_FILTER_FILES,MODEL_FILES_B225
+
+[INSTALL_SECTION_B235]
+CopyFiles=GENERAL_FILES_B230,LOCALE_FILES_B230,XR_FILTER_FILES,MODEL_FILES_B235
+
+[MODEL_FILES_B230]
+B230.GPD
+B230-manifest.ini
+B230.dpb
+B230-conf.GPD
+B230-conf.GDL
+
+[MODEL_FILES_B225]
+B225.GPD
+B225-manifest.ini
+B225.dpb
+B225-conf.GPD
+B225-conf.GDL
+
+[MODEL_FILES_B235]
+B235.GPD
+B235-manifest.ini
+B235.dpb
+B235-conf.GPD
+B235-conf.GDL
+
+[GENERAL_FILES_B230]
+ProductData.xml
+Xerox_B225_B230_B235-pipelineconfig.xml
+Xerox_B225_B230_B235-constraints.js
+Xerox_B225_B230_B235-qpb.xml
+Xerox_B225_B230_B235-devmode-map.xml
+Xerox_B225_B230_B235.auto
+Xerox_B225_B230_B235-SNMP-conf.xml
+Xerox_B225_B230_B235-WSD-conf.xml
+
+[LOCALE_FILES_B230]
+Xerox_B225_B230_B235-textres.gpd
+xr-TextResources.dll
+
+[XR_FILTER_FILES]
+xr-Utilities.v7.211.16.0.dll
+xr-FilterUtilities.v7.211.16.0.dll
+xr-VFilter.dll
+xr-TransformFilter.dll
+xr-AnnotationFilter.dll
+xr-PDLStreamFilter.dll
+msvcp140.dll
+vcruntime140.dll
+vcruntime140_1.dll
+ucrtbase.dll
+api-ms-win-crt-stdio-l1-1-0.dll
+api-ms-win-crt-runtime-l1-1-0.dll
+api-ms-win-crt-convert-l1-1-0.dll
+api-ms-win-crt-heap-l1-1-0.dll
+api-ms-win-crt-string-l1-1-0.dll
+api-ms-win-crt-environment-l1-1-0.dll
+api-ms-win-crt-filesystem-l1-1-0.dll
+api-ms-win-crt-locale-l1-1-0.dll
+api-ms-win-crt-math-l1-1-0.dll
+api-ms-win-crt-multibyte-l1-1-0.dll
+api-ms-win-crt-time-l1-1-0.dll
+api-ms-win-crt-utility-l1-1-0.dll
+api-ms-win-crt-conio-l1-1-0.dll
+api-ms-win-crt-private-l1-1-0.dll
+api-ms-win-crt-process-l1-1-0.dll
+
+[SourceDisksNames.amd64]
+1 = %Location%,,
+2 = %Location%,,,x64
+
+[SourceDisksFiles]
+B230.GPD                                                    = 1
+B230-manifest.ini                                           = 1
+B230-conf.GPD                                               = 1
+B230-conf.GDL                                               = 1
+B230.dpb                                                    = 1
+B225.GPD                                                    = 1
+B225-manifest.ini                                           = 1
+B225-conf.GPD                                               = 1
+B225-conf.GDL                                               = 1
+B225.dpb                                                    = 1
+B235.GPD                                                    = 1
+B235-manifest.ini                                           = 1
+B235-conf.GPD                                               = 1
+B235-conf.GDL                                               = 1
+B235.dpb                                                    = 1
+Xerox_B225_B230_B235-pipelineconfig.xml                     = 1
+Xerox_B225_B230_B235-SNMP-conf.xml                          = 1
+Xerox_B225_B230_B235-WSD-conf.xml                           = 1
+Xerox_B225_B230_B235.auto                                   = 1
+Xerox_B225_B230_B235-constraints.js                         = 1
+Xerox_B225_B230_B235-qpb.xml                                = 1
+Xerox_B225_B230_B235-devmode-map.xml                        = 1
+Xerox_B225_B230_B235-textres.gpd                            = 1
+ProductData.xml                                             = 1
+xr-TextResources.dll                                        = 2
+xr-Utilities.v7.211.16.0.dll                                = 2
+xr-FilterUtilities.v7.211.16.0.dll                          = 2
+xr-VFilter.dll                                              = 2
+xr-TransformFilter.dll                                      = 2
+xr-AnnotationFilter.dll                                     = 2
+xr-PDLStreamFilter.dll                                      = 2
+msvcp140.dll                                                = 2
+vcruntime140.dll                                            = 2
+vcruntime140_1.dll                                          = 2
+ucrtbase.dll                                                = 2
+api-ms-win-crt-stdio-l1-1-0.dll                             = 2
+api-ms-win-crt-runtime-l1-1-0.dll                           = 2
+api-ms-win-crt-convert-l1-1-0.dll                           = 2
+api-ms-win-crt-heap-l1-1-0.dll                              = 2
+api-ms-win-crt-string-l1-1-0.dll                            = 2
+api-ms-win-crt-environment-l1-1-0.dll                       = 2
+api-ms-win-crt-filesystem-l1-1-0.dll                        = 2
+api-ms-win-crt-locale-l1-1-0.dll                            = 2
+api-ms-win-crt-math-l1-1-0.dll                              = 2
+api-ms-win-crt-multibyte-l1-1-0.dll                         = 2
+api-ms-win-crt-time-l1-1-0.dll                              = 2
+api-ms-win-crt-utility-l1-1-0.dll                           = 2
+api-ms-win-crt-conio-l1-1-0.dll                             = 2
+api-ms-win-crt-private-l1-1-0.dll                           = 2
+api-ms-win-crt-process-l1-1-0.dll                           = 2
+
+[OEM URLS]
+"Xerox"="http://go.microsoft.com/fwlink/?LinkID=49&prd=10798&sbp=Printers"
+
+[Strings]
+Location="Xerox B225/B230/B235"
+XR="Xerox"

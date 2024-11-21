@@ -1,0 +1,180 @@
+
+
+;***************************************************************************************
+; INF file for Xerox B305/B310/B315 PCL6 print driver
+; Copyright (c) 2021 Xerox Corporation
+; All rights reserved.
+;***************************************************************************************
+
+
+[Version]
+Signature="$Windows NT$"
+Provider=%XR%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile=Xerox_B305_B310_B315.cat
+ClassVer=4.0
+DriverVer=10/08/2021,7.249.0.0
+
+[Manufacturer]
+"Xerox"=Model,NTamd64
+[Model.NTamd64]
+"Xerox B310 Printer V4 PCL6" = INSTALL_SECTION_B310,usbprint\XeroxB310_Printer742B
+"Xerox B310 Printer V4 PCL6" = INSTALL_SECTION_B310,wsdprint\XeroxB310_Printer742B
+"Xerox B310 Printer V4 PCL6" = INSTALL_SECTION_B310,XeroxB310_Printer742B
+
+"Xerox B305 MFP V4 PCL6" = INSTALL_SECTION_B305,usbprint\XeroxB305_MFP16BC
+"Xerox B305 MFP V4 PCL6" = INSTALL_SECTION_B305,wsdprint\XeroxB305_MFP16BC
+"Xerox B305 MFP V4 PCL6" = INSTALL_SECTION_B305,XeroxB305_MFP16BC
+
+"Xerox B315 MFP V4 PCL6" = INSTALL_SECTION_B315,usbprint\XeroxB315_MFP071C
+"Xerox B315 MFP V4 PCL6" = INSTALL_SECTION_B315,wsdprint\XeroxB315_MFP071C
+"Xerox B315 MFP V4 PCL6" = INSTALL_SECTION_B315,XeroxB315_MFP071C
+
+"Xerox B305/B310/B315 V4 PCL6" = INSTALL_SECTION_B310,usbprint\XeroxNoSel_76f6b9e5bd8227bd
+"Xerox B305/B310/B315 V4 PCL6" = INSTALL_SECTION_B310,wsdprint\XeroxNoSel_76f6b9e5bd8227bd
+"Xerox B305/B310/B315 V4 PCL6" = INSTALL_SECTION_B310,XeroxNoSel_76f6b9e5bd8227bd
+"Xerox B305/B310/B315 V4 PCL6" = INSTALL_SECTION_B310,{DF8EF772-D483-4B62-A280-756E0448A62A}
+
+[ControlFlags]
+ExcludeFromSelect = usbprint\XeroxNoSel_76f6b9e5bd8227bd
+ExcludeFromSelect = wsdprint\XeroxNoSel_76f6b9e5bd8227bd
+ExcludeFromSelect = XeroxNoSel_76f6b9e5bd8227bd
+ExcludeFromSelect = {DF8EF772-D483-4B62-A280-756E0448A62A}
+
+[DestinationDirs]
+DefaultDestDir=66000
+
+[INSTALL_SECTION_B310]
+CopyFiles=GENERAL_FILES_B310,LOCALE_FILES_B310,XR_FILTER_FILES,MODEL_FILES_B310
+
+[INSTALL_SECTION_B305]
+CopyFiles=GENERAL_FILES_B310,LOCALE_FILES_B310,XR_FILTER_FILES,MODEL_FILES_B305
+
+[INSTALL_SECTION_B315]
+CopyFiles=GENERAL_FILES_B310,LOCALE_FILES_B310,XR_FILTER_FILES,MODEL_FILES_B315
+
+[MODEL_FILES_B310]
+B310.GPD
+B310-manifest.ini
+B310.dpb
+B310-conf.GPD
+B310-conf.GDL
+
+[MODEL_FILES_B305]
+B305.GPD
+B305-manifest.ini
+B305.dpb
+B305-conf.GPD
+B305-conf.GDL
+
+[MODEL_FILES_B315]
+B315.GPD
+B315-manifest.ini
+B315.dpb
+B315-conf.GPD
+B315-conf.GDL
+
+[GENERAL_FILES_B310]
+ProductData.xml
+Xerox_B305_B310_B315-pipelineconfig.xml
+Xerox_B305_B310_B315-constraints.js
+Xerox_B305_B310_B315-qpb.xml
+Xerox_B305_B310_B315-devmode-map.xml
+Xerox_B305_B310_B315.auto
+Xerox_B305_B310_B315-SNMP-conf.xml
+Xerox_B305_B310_B315-WSD-conf.xml
+
+[LOCALE_FILES_B310]
+Xerox_B305_B310_B315-textres.gpd
+xr-TextResources.dll
+
+[XR_FILTER_FILES]
+xr-Utilities.v7.211.16.0.dll
+xr-FilterUtilities.v7.211.16.0.dll
+xr-VFilter.dll
+xr-TransformFilter.dll
+xr-AnnotationFilter.dll
+xr-PDLStreamFilter.dll
+msvcp140.dll
+vcruntime140.dll
+vcruntime140_1.dll
+ucrtbase.dll
+api-ms-win-crt-stdio-l1-1-0.dll
+api-ms-win-crt-runtime-l1-1-0.dll
+api-ms-win-crt-convert-l1-1-0.dll
+api-ms-win-crt-heap-l1-1-0.dll
+api-ms-win-crt-string-l1-1-0.dll
+api-ms-win-crt-environment-l1-1-0.dll
+api-ms-win-crt-filesystem-l1-1-0.dll
+api-ms-win-crt-locale-l1-1-0.dll
+api-ms-win-crt-math-l1-1-0.dll
+api-ms-win-crt-multibyte-l1-1-0.dll
+api-ms-win-crt-time-l1-1-0.dll
+api-ms-win-crt-utility-l1-1-0.dll
+api-ms-win-crt-conio-l1-1-0.dll
+api-ms-win-crt-private-l1-1-0.dll
+api-ms-win-crt-process-l1-1-0.dll
+
+[SourceDisksNames.amd64]
+1 = %Location%,,
+2 = %Location%,,,x64
+
+[SourceDisksFiles]
+B310.GPD                                                    = 1
+B310-manifest.ini                                           = 1
+B310-conf.GPD                                               = 1
+B310-conf.GDL                                               = 1
+B310.dpb                                                    = 1
+B305.GPD                                                    = 1
+B305-manifest.ini                                           = 1
+B305-conf.GPD                                               = 1
+B305-conf.GDL                                               = 1
+B305.dpb                                                    = 1
+B315.GPD                                                    = 1
+B315-manifest.ini                                           = 1
+B315-conf.GPD                                               = 1
+B315-conf.GDL                                               = 1
+B315.dpb                                                    = 1
+Xerox_B305_B310_B315-pipelineconfig.xml                     = 1
+Xerox_B305_B310_B315-SNMP-conf.xml                          = 1
+Xerox_B305_B310_B315-WSD-conf.xml                           = 1
+Xerox_B305_B310_B315.auto                                   = 1
+Xerox_B305_B310_B315-constraints.js                         = 1
+Xerox_B305_B310_B315-qpb.xml                                = 1
+Xerox_B305_B310_B315-devmode-map.xml                        = 1
+Xerox_B305_B310_B315-textres.gpd                            = 1
+ProductData.xml                                             = 1
+xr-TextResources.dll                                        = 2
+xr-Utilities.v7.211.16.0.dll                                = 2
+xr-FilterUtilities.v7.211.16.0.dll                          = 2
+xr-VFilter.dll                                              = 2
+xr-TransformFilter.dll                                      = 2
+xr-AnnotationFilter.dll                                     = 2
+xr-PDLStreamFilter.dll                                      = 2
+msvcp140.dll                                                = 2
+vcruntime140.dll                                            = 2
+vcruntime140_1.dll                                          = 2
+ucrtbase.dll                                                = 2
+api-ms-win-crt-stdio-l1-1-0.dll                             = 2
+api-ms-win-crt-runtime-l1-1-0.dll                           = 2
+api-ms-win-crt-convert-l1-1-0.dll                           = 2
+api-ms-win-crt-heap-l1-1-0.dll                              = 2
+api-ms-win-crt-string-l1-1-0.dll                            = 2
+api-ms-win-crt-environment-l1-1-0.dll                       = 2
+api-ms-win-crt-filesystem-l1-1-0.dll                        = 2
+api-ms-win-crt-locale-l1-1-0.dll                            = 2
+api-ms-win-crt-math-l1-1-0.dll                              = 2
+api-ms-win-crt-multibyte-l1-1-0.dll                         = 2
+api-ms-win-crt-time-l1-1-0.dll                              = 2
+api-ms-win-crt-utility-l1-1-0.dll                           = 2
+api-ms-win-crt-conio-l1-1-0.dll                             = 2
+api-ms-win-crt-private-l1-1-0.dll                           = 2
+api-ms-win-crt-process-l1-1-0.dll                           = 2
+
+[OEM URLS]
+"Xerox"="http://go.microsoft.com/fwlink/?LinkID=49&prd=10798&sbp=Printers"
+
+[Strings]
+Location="Xerox B305/B310/B315"
+XR="Xerox"

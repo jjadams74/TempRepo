@@ -1,0 +1,34 @@
+
+*%******************************************************************************************
+*% AutoConfig features for Xerox B225/B230/B235
+*% Copyright(c) 2021 Xerox Corporation
+*% All rights reserved.
+*%******************************************************************************************
+ 
+*GPDSpecVersion: "1.0"
+
+*BidiQueryFile: "b230-conf.GDL"
+
+*Feature: InstallableProductivityPackActual
+{
+	*rcNameID: =IDS_PRODUCTIVITY_PACK
+	*FeatureType: PRINTER_PROPERTY
+	*DefaultOption: NotInstalled
+		
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_INSTOPT_NOT_INSTALLED
+		*DisabledFeatures: LIST(JobPasscode)
+	
+	}
+		
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTOPT_INSTALLED
+			
+	}
+}
+*InvalidCombination: LIST(InstallableProductivityPackActual.NotInstalled, WindowsPinPrinting.ON)
+
+
+

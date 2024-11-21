@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de:DriverEvents xmlns:de="http://schemas.microsoft.com/windows/2011/08/printing/driverevents" schemaVersion="4.0">
+	<!--Version 3.10-->
+  <DriverEvent eventId="{A04CF0FC-1CEB-4C62-B967-6F0AE5C5F81E}">
+    <Transport>USB</Transport>
+    <Transport>WSD</Transport>
+    <Transport>SNMP</Transport>
+    <Query>\Printer.Status</Query>
+    
+    <!--"Printer door open"-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="DoorOpen">
+      <StandardMessage resourceId="107"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="closeDoorOrCover">
+      <StandardMessage resourceId="107"/>
+    </Trigger>
+    
+    <!--"Printer out of paper"-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="trayEmpty">
+      <StandardMessage resourceId="103"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MediaEmpty">
+      <StandardMessage resourceId="103"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MediaNeeded">
+      <StandardMessage resourceId="103"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="trayEmptyOrOpen">
+      <StandardMessage resourceId="103"/>
+    </Trigger>
+	
+    
+    <!--"Printer out of toner/ink"-->
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyEmpty">
+      <StandardMessage resourceId="111"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="replaceCartridgeOut">
+      <StandardMessage resourceId="111"/>
+    </Trigger>  
+    
+    <!--"Printer is low on toner/ink"-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyLow">
+      <StandardMessage resourceId="131"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="cartridgeLow">
+      <StandardMessage resourceId="131"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="cartridgeVeryLow"> 
+      <StandardMessage resourceId="131"/>
+    </Trigger>
+    
+		
+	<!-- "Please check your printer" -->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyNonHP">
+      <StandardMessage resourceId="2301"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="nonHPSupplyDetected">
+      <StandardMessage resourceId="2301"/>
+    </Trigger>
+		
+    
+    <!-- "Please check the printer and clear the paper jam. The printer cannot print until the jam is cleared" -->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="scannerAdfJam">
+      <StandardMessage resourceId="1402"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tray2OpenCannotPrintFromTray3">
+      <StandardMessage resourceId="1402"/>
+    </Trigger>
+    
+    <!--"Printer paper jam"-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MediaJam">
+      <StandardMessage resourceId="121"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="jamInPrinter">
+      <StandardMessage resourceId="121"/>
+    </Trigger>
+    
+    <!--"Please check the printer and replace the ink cartidge."-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="unauthorizedSupply">
+      <StandardMessage resourceId="1804"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="antiTheftEnabledSupplyDetected">
+      <StandardMessage resourceId="1804"/>
+    </Trigger>
+		
+    <!--"Printer output bin full"-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="OutputAreaFull">
+      <StandardMessage resourceId="119"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="outputBinFull">
+      <StandardMessage resourceId="119"/>
+    </Trigger>
+    
+    <!--"Printer paused"-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="paused">
+      <StandardMessage resourceId="127"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="Paused">
+      <StandardMessage resourceId="127"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="InReserveMode">
+      <StandardMessage resourceId="127"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="inReserveMode">
+      <StandardMessage resourceId="127"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="coolDownMode">
+      <StandardMessage resourceId="127"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="initializing">
+      <StandardMessage resourceId="127"/>
+    </Trigger>
+    
+	<!--"Printer out of memory"-->
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MemoryOut">
+      <StandardMessage resourceId="117"/>
+    </Trigger>
+	
+	<!--"This document was sent to the printer"-->
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyGenuine">
+      <StandardMessage resourceId="101"/>
+    </Trigger>	
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="genuineHP">
+      <StandardMessage resourceId="101"/>
+    </Trigger>
+	
+	<!--"Printer needs user intervention"-->
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyUpgradable">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="upgradableSupply">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="AttentionRequired">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="cartridgeMissing">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyCounterfeitQuestion">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyFailure">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyIncompatible">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplySetupNeeded">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="StartupRoutineFailed">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="cartridgeCounterfeitQuestion">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="cartridgeCounterfeit">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="cartridgeFailure">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="incompatibleConsumable">
+      <StandardMessage resourceId="129"/>
+    </Trigger>	
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="insertSETUPCartridge">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="startupRoutineFailed">
+      <StandardMessage resourceId="129"/>
+  </Trigger>
+	<Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MarkerSupplyMissing">
+      <StandardMessage resourceId="129"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="printFailure">
+    <StandardMessage resourceId="129"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="printerError">
+    <StandardMessage resourceId="129"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="outputBinOpened">
+    <StandardMessage resourceId="129"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tooManyPagesToStaple">
+    <StandardMessage resourceId="129"/>
+  </Trigger>  
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="shaidOOITooEarlyFailure">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="sensorError">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="OOBETimeOut">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="trayLiftingFailure">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="misprint">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="SensorError">
+      <StandardMessage resourceId="129"/>
+    </Trigger>
+    
+  <!-- Printer paper problem-->
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="MediaMismatch">
+      <StandardMessage resourceId="125"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="sizeMismatchInTray">
+      <StandardMessage resourceId="125"/>
+  </Trigger>
+  
+  <!-- Please check the toner system in your printer.-->
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerLevelSensorError">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="missingMemory">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="defectiveMemory">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="usedConsumable">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerUnexpectedRecharge">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerPartialRechargeCanFinish">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerPartialRechargeWaitOut">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerSealInPlace">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerLevelError">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerRechargeMotorError">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerInvalidRecharge">
+      <StandardMessage resourceId="2505"/>
+  </Trigger>
+  
+    <!--"Please check that the ink cartridge was installed correctly in the printer."-->
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="cartridgeInWrongOrder">
+      <StandardMessage resourceId="2506"/>
+    </Trigger>
+  
+  <!-- Please check the printer and add toner when needed.-->
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="tonerReadyForRecharge">
+      <StandardMessage resourceId="2405"/>
+  </Trigger>
+  
+  <!-- Please check your printer for paper problems.-->
+  <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="inputTrayOverLoaded">
+      <StandardMessage resourceId="1701"/>
+  </Trigger>
+    <Trigger result="\Printer.Status.Summary:StateReason" comparison="EqualTo" value="scannerAdfMispick">
+      <StandardMessage resourceId="1701"/>
+    </Trigger>
+    
+  </DriverEvent>
+</de:DriverEvents>
+
